@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "main"
+        label: "Main Content"
+        file: "content.json"
+        format: json
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Why Families Section Title", name: "why_title", widget: "string" }
+          - { label: "Services Section Title", name: "services_title", widget: "string" }
+          - { label: "Get Started Section Title", name: "started_title", widget: "string" }
+          - { label: "Service 1 Title", name: "svc1_title", widget: "string" }
+          - { label: "Service 1 Description", name: "svc1_desc", widget: "text" }
+          - { label: "Service 2 Title", name: "svc2_title", widget: "string" }
+          - { label: "Service 2 Description", name: "svc2_desc", widget: "text" }
+          - { label: "Service 3 Title", name: "svc3_title", widget: "string" }
+          - { label: "Service 3 Description", name: "svc3_desc", widget: "text" }
+          - { label: "Service 4 Title", name: "svc4_title", widget: "string" }
+          - { label: "Service 4 Description", name: "svc4_desc", widget: "text" }
+          - { label: "Service 5 Title", name: "svc5_title", widget: "string" }
+          - { label: "Service 5 Description", name: "svc5_desc", widget: "text" }
+          - { label: "Service 6 Title", name: "svc6_title", widget: "string" }
+          - { label: "Service 6 Description", name: "svc6_desc", widget: "text" }

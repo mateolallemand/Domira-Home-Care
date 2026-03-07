@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Disable auto publishing - Mateo deploys manually
+[context.production]
+  publish = "."
+
+[[plugins]]
+  package = "@netlify/plugin-no-more-404"
