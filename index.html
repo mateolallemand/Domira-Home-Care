@@ -1924,14 +1924,36 @@
                         <img src="images/slide7.jpg" alt="Caregiver with client" style="border-radius: var(--radius-lg); width: 100%;">
                     </div>
                     <h2 style="color: var(--teal); font-size: 1.8rem;">How It Works</h2>
-                    <p style="color: var(--text-light); margin: 1rem 0;">We understand that not one care plan fits all. Daily services can include anything from meal preparation, hygiene, cleaning, and supervision. We will take the time to get to know you and develop an individualized care plan that fits your specific needs.</p>
-                    <p style="color: var(--text-light); margin-bottom: 1.5rem;">Fill out the form on this page and one of our staff members will connect with you to begin the process of getting the care you or your loved one needs.</p>
+                    <p style="color: var(--text-light); margin: 1rem 0 1.5rem;">Getting started with home care is simple. Our team will guide you through a few straightforward steps to learn about your needs and help you determine the best care options for your situation.</p>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</span>
+                            <div><strong style="color: var(--navy);">Reach Out</strong><p style="color: var(--text-light); margin: 0.25rem 0 0;">Call us or submit the form below to start the conversation. We'll gather a little information and answer any initial questions you may have.</p></div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</span>
+                            <div><strong style="color: var(--navy);">Care Consultation</strong><p style="color: var(--text-light); margin: 0.25rem 0 0;">A member of our team will speak with you to better understand the care needs, schedule, and type of support that may be helpful.</p></div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</span>
+                            <div><strong style="color: var(--navy);">Care Planning</strong><p style="color: var(--text-light); margin: 0.25rem 0 0;">If home care is the right fit, we'll outline a personalized plan and discuss the next steps to begin services.</p></div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">4</span>
+                            <div><strong style="color: var(--navy);">Services Begin</strong><p style="color: var(--text-light); margin: 0.25rem 0 0;">Once everything is in place, we match the client with a caregiver and schedule care to begin.</p></div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <span style="background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">5</span>
+                            <div><strong style="color: var(--navy);">Ongoing Support</strong><p style="color: var(--text-light); margin: 0.25rem 0 0;">Our team stays involved to ensure everything continues to run smoothly. As needs change, we can adjust services and schedules at any time.</p></div>
+                        </div>
+                    </div>
                     <h3 style="margin-bottom: 0.75rem;">Payment Options:</h3>
                     <ul class="check-list"><li>Private Pay</li><li>Long-Term Care Insurance</li></ul>
                 </div>
                 <div style="background: var(--parchment); border-radius: var(--radius-lg); padding: 2.5rem;">
-                    <h2 style="color: var(--teal); font-size: 1.8rem; margin-bottom: 0.5rem;">Start Here:</h2>
-                    <p style="color: var(--text-light); margin-bottom: 2rem;">When you fill out this form you can expect information, pricing and communication with a caring staff member from our office.</p>
+                    <h2 style="color: var(--teal); font-size: 1.8rem; margin-bottom: 0.5rem;">Start Home Care With Confidence:</h2>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Whether you are planning ahead or need help right away, we make it easy to begin. Our team will guide you through every step so you can find the right care solution for your family.</p>
+                    <p style="color: var(--text-light); margin-bottom: 2rem; font-style: italic;">There is no obligation — just helpful guidance and compassionate support.</p>
                     <form name="intake" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="intake">
                         <div class="form-group"><label>Who Needs Care? *</label><select name="who-needs-care" required><option value="">Select...</option><option>Myself</option><option>Spouse</option><option>Parent</option><option>Grandparent</option><option>Other Relative</option><option>Friend</option><option>Other</option></select></div>
@@ -2260,4 +2282,3 @@ fetch('/content.json').then(r=>r.json()).then(data=>{
  
 </body>
 </html>
- 
