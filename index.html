@@ -1004,6 +1004,9 @@
             .benefits-grid { grid-template-columns: 1fr; }
             .section { padding: 3rem 1.5rem; }
             .header-phone { display: none; }
+            .hero-buttons { flex-direction: column; gap: 0.75rem; }
+            .hero-buttons .btn { text-align: center; justify-content: center; width: 100%; font-size: 0.9rem; }
+            .btn { font-size: 0.9rem; padding: 0.7rem 1.2rem; }
         }
     </style>
 </head>
@@ -1045,7 +1048,7 @@
                 </div>
                 <a href="#" onclick="showPage('faq'); return false;">FAQs</a>
                 <a href="#" onclick="showPage('contact'); return false;">Contact</a>
-                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; white-space: nowrap;" onclick="showPage('start-here'); return false;">Schedule a Free Consultation</a>
+                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;" onclick="showPage('start-here'); return false;">Schedule a Free Consultation</a>
             </nav>
             <a href="tel:9726002660" class="header-phone">972-600-2660</a>
             <div class="hamburger" onclick="toggleMobileNav()">
@@ -1952,7 +1955,7 @@
                     <ul class="check-list"><li>Private Pay</li><li>Long-Term Care Insurance</li></ul>
                 </div>
                 <div style="background: var(--parchment); border-radius: var(--radius-lg); padding: 2.5rem;">
-                    <h2 style="color: var(--teal); font-size: 1.5rem; margin-bottom: 0.5rem; white-space: nowrap;">Start Home Care With Confidence:</h2>
+                    <h2 style="color: var(--teal); font-size: 1.45rem; margin-bottom: 0.5rem;">Start Home Care With Confidence:</h2>
                     <p style="color: var(--text-light); margin-bottom: 1rem;">Whether you are planning ahead or need help right away, we make it easy to begin. Our team will guide you through every step so you can find the right care solution for your family.</p>
                     <p style="color: var(--text-light); margin-bottom: 2rem; font-style: italic;">There is no obligation — just helpful guidance and compassionate support.</p>
                     <form name="intake" method="POST" data-netlify="true">
@@ -2283,4 +2286,3 @@ fetch('/content.json').then(r=>r.json()).then(data=>{
  
 </body>
 </html>
- 
