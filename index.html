@@ -1026,6 +1026,35 @@
 
 </head>
 <body>
+<script>
+(function(){
+    var h = window.location.hash;
+    if (!h) return;
+    var map = {
+        '#home': '/',
+        '#about': '/about',
+        '#services': '/services',
+        '#service-personal': '/personal-care',
+        '#service-companion': '/companion-care',
+        '#service-homemaking': '/homemaking',
+        '#service-respite': '/alzheimers-dementia-care',
+        '#service-recovery': '/recovery-support',
+        '#service-extended': '/extended-hour-care',
+        '#faq': '/faq',
+        '#careers': '/careers',
+        '#contact': '/contact',
+        '#start-here': '/start-here',
+        '#blog': '/resources',
+        '#referrals': '/referrals',
+        '#locations': '/locations',
+        '#cost': '/cost-of-care',
+        '#signs': '/signs-parent-needs-help',
+        '#compare': '/home-care-comparison'
+    };
+    if (map[h]) window.location.replace(map[h]);
+})();
+</script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -1137,7 +1166,7 @@
  
     <!-- ======================== HOME PAGE ======================== -->
 
-    <section class="page active" id="home">
+    <section class="page active">
         <div class="hero">
             <div class="hero-slideshow">
                 <div class="hero-slide active" style="background-image: url('images/slide4.jpg');"></div>
