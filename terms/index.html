@@ -1395,6 +1395,13 @@
                         var successEl = form.parentElement.querySelector('[id$="-success"]');
                         if (successEl) { successEl.style.display = 'block'; }
                         form.reset();
+                        // Fire GA4 custom event for key event tracking
+                        gtag('event', 'lead_submission_success', {
+                            'page_path': '/start-here/thank-you',
+                            'page_location': 'https://domirahomecare.com/start-here/thank-you',
+                            'event_category': 'form',
+                            'event_label': 'intake_form'
+                        });
                         // Method 1: Fire Google Ads conversion event
                         gtag('event', 'conversion', {'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
                         // Method 2: Virtual pageview to /start-here/thank-you
