@@ -1524,15 +1524,16 @@
                         var successEl = form.parentElement.querySelector('[id$="-success"]');
                         if (successEl) { successEl.style.display = 'block'; }
                         form.reset();
-                        try {
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C',
-                                'event_callback': function() { console.log('Ads conversion fired'); }
-                            });
-                        } catch(e) { console.error('gtag error', e); }
-                        // Fallback: direct conversion pixel
+                        // Fire Google Ads conversion
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
+                        }
+                        // Fallback: direct conversion pixel with cache buster
                         var img = new Image(1,1);
-                        img.src = 'https://www.googleadservices.com/pagead/conversion/17945712069/?label=nCo-Cl6v25QcEMWrl-1C&guid=ON&script=0';
+                        img.src = 'https://www.googleadservices.com/pagead/conversion/17945712069/?label=nCo-Cl6v25QcEMWrl-1C&guid=ON&script=0&random=' + Date.now();
+                        // Second fallback: global site tag event via dataLayer
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({'event': 'ads_conversion_form', 'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
                     }).catch(function(err) { alert('Error. Please call us at 972-600-2660.'); });
                 });
             });
