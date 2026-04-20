@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0LT18T3MS"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17945712069"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -1309,16 +1310,15 @@
                         var successEl = form.parentElement.querySelector('[id$="-success"]');
                         if (successEl) { successEl.style.display = 'block'; }
                         form.reset();
-                        // Fire Google Ads conversion
-                        if (typeof gtag === 'function') {
+                        // Fire Google Ads conversion via gtag
+                        gtag('event', 'conversion', {'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
+                        // Fire again after short delay in case Ads module was still loading
+                        setTimeout(function() {
                             gtag('event', 'conversion', {'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
-                        }
-                        // Fallback: direct conversion pixel with cache buster
+                        }, 500);
+                        // Fallback: direct conversion pixel
                         var img = new Image(1,1);
                         img.src = 'https://www.googleadservices.com/pagead/conversion/17945712069/?label=nCo-Cl6v25QcEMWrl-1C&guid=ON&script=0&random=' + Date.now();
-                        // Second fallback: global site tag event via dataLayer
-                        window.dataLayer = window.dataLayer || [];
-                        window.dataLayer.push({'event': 'ads_conversion_form', 'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
                     }).catch(function(err) { alert('Error. Please call us at 972-600-2660.'); });
                 });
             });
