@@ -1300,26 +1300,6 @@
                         var successEl = form.parentElement.querySelector('[id$="-success"]');
                         if (successEl) { successEl.style.display = 'block'; }
                         form.reset();
-                        // Fire GA4 custom event for key event tracking
-                        gtag('event', 'lead_submission_success', {
-                            'page_path': '/start-here/thank-you',
-                            'page_location': 'https://domirahomecare.com/start-here/thank-you',
-                            'event_category': 'form',
-                            'event_label': 'intake_form'
-                        });
-                        // Method 1: Fire Google Ads conversion event
-                        gtag('event', 'conversion', {'send_to': 'AW-17945712069/nCo-Cl6v25QcEMWrl-1C'});
-                        // Method 2: Virtual pageview to /start-here/thank-you
-                        // (catches page-load type conversions in Google Ads)
-                        gtag('config', 'AW-17945712069', {'page_path': '/start-here/thank-you'});
-                        gtag('event', 'page_view', {
-                            'page_path': '/start-here/thank-you',
-                            'page_location': 'https://domirahomecare.com/start-here/thank-you',
-                            'send_to': 'AW-17945712069'
-                        });
-                        // Method 3: Direct conversion pixel
-                        var img = new Image(1,1);
-                        img.src = 'https://www.googleadservices.com/pagead/conversion/17945712069/?label=nCo-Cl6v25QcEMWrl-1C&guid=ON&script=0&random=' + Date.now();
                     }).catch(function(err) { alert('Error. Please call us at 972-600-2660.'); });
                 });
             });
