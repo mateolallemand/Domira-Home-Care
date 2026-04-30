@@ -1192,7 +1192,7 @@
                     <h2 style="color: var(--teal); font-size: 1.55rem; margin-bottom: 0.5rem;">Start Home Care With Confidence:</h2>
                     <p style="color: var(--text-light); margin-bottom: 1rem;">Whether you are planning ahead or need help right away, we make it easy to begin. Our team will guide you through every step so you can find the right care solution for your family.</p>
                     <p style="color: var(--text-light); margin-bottom: 2rem; font-style: italic;">There is no obligation, just helpful guidance and compassionate support.</p>
-                    <form name="intake" method="POST" data-netlify="true">
+                    <form name="intake" method="POST" data-netlify="true" action="/thank-you/">
                         <input type="hidden" name="form-name" value="intake">
                         <div class="form-group"><label>Who Needs Care? *</label><select name="who-needs-care" required><option value="">Select...</option><option>Myself</option><option>Spouse</option><option>Parent</option><option>Grandparent</option><option>Other Relative</option><option>Friend</option><option>Other</option></select></div>
                         <div class="form-group"><label>How Old is the Person Who Needs Care? *</label><select name="age-range" required><option value="">Select...</option><option>Under 45</option><option>45 to 54</option><option>55 to 64</option><option>65 to 74</option><option>75 to 84</option><option>85+</option></select></div>
@@ -1302,22 +1302,7 @@
         function toggleMobileNav() {
             document.getElementById('mobileNav').classList.toggle('active');
         }
-        // Form submissions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('form[data-netlify]').forEach(function(form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    var formData = new FormData(form);
-                    fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(formData).toString()
-                    }).then(function() {
-                        window.location.href = '/thank-you/';
-                    }).catch(function(err) { alert('Error. Please call us at 972-600-2660.'); });
-                });
-            });
-            // Hero slideshow
+        // Hero slideshow
             var slides = document.querySelectorAll('.hero-slide');
             if (slides.length > 1) {
                 var current = 0;
