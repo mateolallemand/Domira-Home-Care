@@ -378,20 +378,36 @@
             font-style: italic;
             font-size: 1.3rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
+            margin: 0 0 1rem;
             position: relative;
-            padding-left: 2rem;
+            padding-left: 2.5rem;
         }
         .testimonial-text blockquote::before {
             content: '\201C';
-            font-size: 4rem;
+            font-size: 3.5rem;
+            line-height: 1;
             color: var(--gold);
             position: absolute;
-            left: -0.5rem;
-            top: -1rem;
+            left: 0;
+            top: 0.15rem;
             font-family: 'Playfair Display', serif;
         }
-        .testimonial-text .author { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+        .testimonial-text blockquote::after {
+            content: '\201D';
+            font-size: 1.75rem;
+            line-height: 0;
+            color: var(--gold);
+            vertical-align: -0.45em;
+            margin-left: 0.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .testimonial-text .author {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            font-style: normal;
+            letter-spacing: 0.05em;
+            padding-left: 2.5rem;
+        }
         .testimonial-image { border-radius: var(--radius-lg); overflow: hidden; }
         .testimonial-image img { width: 100%; height: 300px; object-fit: cover; }
  
@@ -1383,7 +1399,7 @@
             <div class="testimonial-inner">
                 <div class="testimonial-text fade-in-left">
                     <blockquote>When the right support is in place, everything feels more manageable for families and the people they care about.</blockquote>
-                    <div class="author">,  Domira Home Care LLC</div>
+                    <div class="author">Domira Home Care</div>
                 </div>
                 <div class="testimonial-image fade-in-right">
                     <div class="img-hover-zoom">
